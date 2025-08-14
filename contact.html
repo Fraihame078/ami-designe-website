@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты – Ami Designe</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-1oARZt3xZNYJmPDiFB+SyYHwU07xdvGW94uQIbpTcf/tNjGz4OFIqpJxgI2nQiRg6HvBtajq2fWNe3N8aJKslg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Ami Designe</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">Обо мне</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="contact.html" class="active">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-nav-toggle" id="navToggle" aria-label="Меню">&#9776;</div>
+    </div>
+  </header>
+
+  <main class="contact-section">
+    <div class="container">
+      <h1 style="text-align:center; margin-bottom:2rem;">Контакты</h1>
+      <p class="lead" style="max-width:600px; margin:0 auto 2rem;">Я&nbsp;буду рада обсудить ваш будущий проект! Выберите удобный способ связи&nbsp;— напишите письмо, позвоните или оставьте сообщение через форму обратной связи.</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:ami.designe@example.com">ami.designe@example.com</a></p>
+        <p><strong>Телефон:</strong> <a href="tel:+70000000000">+7&nbsp;(000)&nbsp;000‑03‑00</a></p>
+        <p><strong>Город:</strong> Москва, Россия</p>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+        <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+      </div>
+      <div class="contact-form" style="margin-top:2rem;">
+        <form action="mailto:ami.designe@example.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">Ваш email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">Обо мне</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Ami Designe. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
