@@ -1,13 +1,13 @@
 /*
- * Global Stylesheet for Ami Designe website
+ * Глобальные стили для сайта Ami
  *
- * This file defines the overall look and feel of the website. It sets up
- * colours, typography, layouts and responsive behaviour. Use CSS custom
- * properties (variables) defined in :root to adjust the colour palette
- * consistently across all pages.
+ * Этот файл определяет общий внешний вид сайта. Здесь задаются
+ * цвета, типографика, макеты и адаптивное поведение. Используйте
+ * CSS‑переменные, определённые в :root, чтобы удобно изменять
+ * цветовую схему на всех страницах.
  */
 
-/* Root variables for easy theming */
+/* Переменные для удобного изменения темы */
 :root {
   --primary-color: #333333;
   --secondary-color: #f6f6f6;
@@ -16,7 +16,7 @@
   --text-color: #333333;
 }
 
-/* Reset some basic elements */
+/* Сброс базовых элементов */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ a {
   padding: 0 1rem;
 }
 
-/* Header & Navigation */
+/* Шапка сайта и навигация */
 header {
   width: 100%;
   background-color: var(--background-color);
@@ -87,7 +87,7 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-/* Mobile Navigation Toggle */
+/* Кнопка мобильного меню */
 .mobile-nav-toggle {
   display: none;
   font-size: 2rem;
@@ -119,7 +119,7 @@ nav ul li a:hover {
   }
 }
 
-/* Hero Section */
+/* Главный экран */
 .hero {
   min-height: 85vh;
   position: relative;
@@ -180,7 +180,7 @@ nav ul li a:hover {
   background-color: #8e60b0;
 }
 
-/* Section styles */
+/* Общие стили для секций */
 .section {
   padding: 4rem 0;
 }
@@ -200,7 +200,7 @@ nav ul li a:hover {
   color: var(--primary-color);
 }
 
-/* About preview */
+/* Превью раздела «Обо мне» */
 .about-preview {
   display: flex;
   flex-direction: column;
@@ -213,7 +213,7 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Services */
+/* Секция услуг на главной странице */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -250,7 +250,7 @@ nav ul li a:hover {
   color: #555555;
 }
 
-/* Portfolio preview */
+/* Превью портфолио на главной */
 .portfolio-preview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -297,7 +297,7 @@ nav ul li a:hover {
   opacity: 1;
 }
 
-/* Call to action */
+/* Блок призыва к действию */
 .cta {
   background-color: var(--accent-color);
   color: #ffffff;
@@ -316,7 +316,7 @@ nav ul li a:hover {
   font-size: 1.125rem;
 }
 
-/* Footer */
+/* Подвал сайта */
 footer {
   background-color: var(--primary-color);
   color: #ffffff;
@@ -346,7 +346,7 @@ footer p {
   color: #dddddd;
 }
 
-/* About page specifics */
+/* Стили страницы «Обо мне» */
 .about-section {
   padding-top: 6rem;
   display: flex;
@@ -383,7 +383,7 @@ footer p {
   color: #555555;
 }
 
-/* Services page specifics */
+/* Стили страницы «Услуги» */
 .services-section {
   padding-top: 6rem;
 }
@@ -425,7 +425,7 @@ footer p {
   margin-bottom: 0.5rem;
 }
 
-/* Portfolio page specifics */
+/* Стили страницы «Портфолио» */
 .portfolio-section {
   padding-top: 6rem;
 }
@@ -466,7 +466,7 @@ footer p {
   font-size: 1rem;
 }
 
-/* Contact page specifics */
+/* Стили страницы «Контакты» */
 .contact-section {
   padding-top: 6rem;
   display: flex;
@@ -545,4 +545,21 @@ footer p {
 
 .social-links a:hover {
   color: var(--primary-color);
+}
+
+/*
+ * Дополнительные стили для интерактивных карточек услуг
+ * Скрываем описание по умолчанию и показываем его при активации
+ */
+.service-detail-card {
+  cursor: pointer;
+}
+
+.service-detail-card .service-body {
+  display: none;
+  margin-top: 1rem;
+}
+
+.service-detail-card.active .service-body {
+  display: block;
 }
