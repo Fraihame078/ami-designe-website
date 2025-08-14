@@ -29,10 +29,10 @@
   <main class="contact-section">
     <div class="container">
       <h1 style="text-align:center; margin-bottom:2rem;">Контакты</h1>
-      <p class="lead" style="max-width:600px; margin:0 auto 2rem;">Я&nbsp;буду рада обсудить ваш будущий проект! Выберите удобный способ связи&nbsp;— напишите письмо, позвоните или оставьте сообщение через форму обратной связи.</p>
+      <p class="lead" style="max-width:600px; margin:0 auto 2rem;">Я&nbsp;буду рада обсудить ваш будущий проект! Выберите удобный способ связи&nbsp;— напишите письмо, позвоните или оставьте заявку на обратный звонок.</p>
       <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:wez1234567890@yandex.ru">wez1234567890@yandex.ru</a></p>
-        <p><strong>Телефон:</strong> <a href="tel:+70000000000">+7&nbsp;(000)&nbsp;000‑00‑00</a></p>
+        <p><strong>Email для связи:</strong> <a href="mailto:wez1234567890@yandex.ru">wez1234567890@yandex.ru</a></p>
+        <p><strong>Телефон для связи:</strong> <a href="tel:+79968295850">+7&nbsp;996&nbsp;829‑58‑50</a></p>
         <p><strong>Город:</strong> Москва, Россия</p>
       </div>
       <div class="social-links">
@@ -40,45 +40,25 @@
         <a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
         <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
       </div>
-      <div class="contact-form" style="margin-top:2rem;">
-        <!--
-          Форма отправки сообщения. Для статического сайта используется сервис formsubmit.co,
-          который перенаправляет данные формы на указанный адрес электронной почты.
-
-          Перед использованием замените "ami@example.com" на реальный адрес, на который
-          должны приходить сообщения. После первой отправки на этот адрес придёт письмо
-          для подтверждения, после чего форма начнёт работать.
-
-          Поле _next указывает URL, на который будет перенаправлён пользователь
-          после успешной отправки (здесь остаётся та же страница). Вы можете изменить его,
-          например, на thanks.html или главную страницу сайта.
-
-          Дополнительные параметры, такие как _subject и _autoresponse, позволяют
-          настроить тему письма и автоматический ответ (подробнее в документации formsubmit).
-        -->
-        <form action="https://formsubmit.co/wez1234567890@yandex.ru" method="POST">
-          <!-- скрытые поля для настройки письма -->
-          <input type="hidden" name="_subject" value="Новое сообщение с сайта Ami">
-          <!-- После отправки формы посетитель будет перенаправлён на страницу благодарности -->
-          <input type="hidden" name="_next" value="https://fraihame078.github.io/ami-designe-website/thankyou.html">
-          <!-- URL вашего сайта для отображения ссылки "Вернуться на сайт" на странице FormSubmit -->
-          <input type="hidden" name="_url" value="https://fraihame078.github.io/ami-designe-website/">
-          <!-- отключаем reCAPTCHA (опционально); при необходимости можно удалить -->
-          <input type="hidden" name="_captcha" value="false">
+      <!--
+        Блок с формой обратной связи теперь заменён на форму заявки на обратный звонок.
+        Посетители могут оставить своё имя и телефон, чтобы получить звонок.
+      -->
+      <div class="callback-form" style="margin-top:2rem;">
+        <h2 style="text-align:center; margin-bottom:1rem;">Запрос обратного звонка</h2>
+        <p style="text-align:center; margin-bottom:1rem; max-width:600px; margin-left:auto; margin-right:auto;">Оставьте свои данные, и я свяжусь с вами по телефону.</p>
+        <form id="callbackForm">
           <div>
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" required>
+            <label for="callbackName">Ваше имя</label>
+            <input type="text" id="callbackName" name="name" required>
           </div>
           <div>
-            <label for="email">Ваш email</label>
-            <input type="email" id="email" name="email" required>
+            <label for="callbackPhone">Ваш телефон</label>
+            <input type="tel" id="callbackPhone" name="phone" required>
           </div>
-          <div>
-            <label for="message">Сообщение</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit">Отправить</button>
+          <button type="submit">Запросить звонок</button>
         </form>
+        <p id="callbackMsg" class="muted" style="text-align:center; margin-top:1rem;"></p>
       </div>
     </div>
   </main>

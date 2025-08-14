@@ -32,4 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.toggle('active');
     });
   });
+
+  // Обработка заявки на обратный звонок
+  // Когда посетитель отправляет форму, открываем почтовый клиент с предзаполненным
+  // письмом на адрес дизайнера. В письме передаём имя и телефон клиента.
+  const callbackForm = document.getElementById('callbackForm');
+  const callbackMsg  = document.getElementById('callbackMsg');
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name  = document.getElementById('callbackName').value.trim();
+      const phone = document.getElementById('callbackPhone').value.trim();
+      if (!name || !phone) {
+        callbackMsg.textContent = 'Пожалуйста, заполните все поля.';
+        return;
+      }
+      // Формируем ссылку mailto с кодировкой темы и тела письма
+      const subject = encodeURIComponent('Запрос обратного звонка');
+      const body    = encodeURIComponent(`Имя: ${name}\nТелефон: ${phone}`);
+      const mailtoLink = `mailto:wez1234567890@yandex.ru?subject=${subject}&body=${body}`;
+      // Открываем почтовый клиент пользователя
+      window.location.href = mailtoLink;
+      // Показываем уведомление на сайте
+      callbackMsg.textContent = 'Спасибо! Ваш запрос на звонок отправлен.';
+      // Очищаем форму
+      callbackForm.reset();
+    });
+  }
 });
