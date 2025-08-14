@@ -31,7 +31,7 @@
       <h1 style="text-align:center; margin-bottom:2rem;">Контакты</h1>
       <p class="lead" style="max-width:600px; margin:0 auto 2rem;">Я&nbsp;буду рада обсудить ваш будущий проект! Выберите удобный способ связи&nbsp;— напишите письмо, позвоните или оставьте сообщение через форму обратной связи.</p>
       <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:wez1234567890@yandex.ru">wez1234567890@yandex.ru</a></p>
+        <p><strong>Email:</strong> <a href="mailto:ami@example.com">ami@example.com</a></p>
         <p><strong>Телефон:</strong> <a href="tel:+70000000000">+7&nbsp;(000)&nbsp;000‑00‑00</a></p>
         <p><strong>Город:</strong> Москва, Россия</p>
       </div>
@@ -56,10 +56,11 @@
           Дополнительные параметры, такие как _subject и _autoresponse, позволяют
           настроить тему письма и автоматический ответ (подробнее в документации formsubmit).
         -->
-        <form action="https://formsubmit.co/wez1234567890@yandex.ru" method="POST">
+        <form action="https://formsubmit.co/ami@example.com" method="POST">
           <!-- скрытые поля для настройки письма -->
           <input type="hidden" name="_subject" value="Новое сообщение с сайта Ami">
-          <input type="hidden" name="_next" value="https://fraihame078.github.io/ami-designe-website/contact.html">
+          <!-- После отправки формы посетитель будет перенаправлён на страницу благодарности -->
+          <input type="hidden" name="_next" value="https://fraihame078.github.io/ami-designe-website/thankyou.html">
           <input type="hidden" name="_captcha" value="false">
           <div>
             <label for="name">Ваше имя</label>
